@@ -206,55 +206,58 @@
         <div class="revenue-header">
           <h5>Revenue Chart</h5>
           <div class="revenue-buttons">
-            <button>Options</button>
-            <button>View All</button>
+            <button class="option-btn">Options</button>
+            <button class="viewall-btn">View All</button>
           </div>
         </div>
         <div class="revenue-content">
           <div class="revenue-img">
-            <img
+            <img id="revenue-chart-img"
               src="/assets/revenue-chart/revenue-chart.png"
               alt="revenue chart"
             />
-            <div class="revenue-stats">
-              <img src="/assets/revenue-chart/arrow-up.svg" alt="arrow up" />
-              <h4>$675</h4>
-              <h3>Weekly Earnings</h3>
-            </div>
-            <div class="revenue-stats">
-              <img
-                src="/assets/revenue-chart/arrow-down.svg"
-                alt="arrow down"
-              />
-              <h4>$1,587</h4>
-              <h3>Monthly Earnings</h3>
-            </div>
-            <div class="revenue-stats">
-              <img src="/assets/revenue-chart/arrow-up.svg" alt="arrow up" />
-              <h4>$45,965</h4>
-              <h3>Yearly Earnings</h3>
+            <div class="revenue-stats-container">
+              <div class="revenue-stats">
+                <img src="/assets/revenue-chart/arrow-up.svg" alt="arrow up" />
+                <h4>$675</h4>
+                <h3>Weekly Earnings</h3>
+              </div>
+              <div class="revenue-stats">
+                <img
+                  src="/assets/revenue-chart/arrow-down.svg"
+                  alt="arrow down"
+                />
+                <h4>$1,587</h4>
+                <h3>Monthly Earnings</h3>
+              </div>
+              <div class="revenue-stats">
+                <img src="/assets/revenue-chart/arrow-up.svg" alt="arrow up" />
+                <h4>$45,965</h4>
+                <h3>Yearly Earnings</h3>
+              </div>
             </div>
           </div>
-          <table>
+
+          <table class="revenue-table">
             <tr>
               <td>Total Customers</td>
-              <td>8,257 <span>+22%</span></td>
+              <td>8,257 <span class="increase"><sup>+09%</sup></span></td>
             </tr>
             <tr>
               <td>Total Income</td>
-              <td>$3,857 <span>-10%</span></td>
+              <td>$3,857 <span class="decrease"><sup>-18%</sup></span></td>
             </tr>
             <tr>
               <td>Total Completed</td>
-              <td>29 <span>+22%</span></td>
+              <td>29 <span class="increase"><sup>+16%</sup> </span></td>
             </tr>
             <tr>
               <td>Total Expense</td>
-              <td>$6,295 <span>+22%</span></td>
+              <td>$6,295 <span class="increase"><sup>+09%</sup></span></td>
             </tr>
             <tr>
               <td>New Customers</td>
-              <td>654 <span>+22%</span></td>
+              <td>654 <span class="increase"><sup>+22%</sup></span></td>
             </tr>
           </table>
         </div>

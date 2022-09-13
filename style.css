@@ -35,8 +35,6 @@ samp,
 small,
 strike,
 strong,
-sub,
-sup,
 tt,
 var,
 b,
@@ -144,6 +142,11 @@ body {
 	background-color: #f6f6f6;
 }
 
+button {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 700;
+}
+
 h1, h2, h3, h4, h5 {
 	font-weight: 700;
 }
@@ -238,8 +241,10 @@ header {
 /* Stats Section styling */
 .stats-container {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-evenly;
 	padding-top: 50px;
+	margin-bottom: 30px;
 }
 
 .stats-card {
@@ -249,6 +254,7 @@ header {
 	justify-content: space-evenly;
 	align-items: center;
 	padding: 15px 20px;
+	margin-bottom: 30px;
 	box-shadow: 2px 6px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -266,4 +272,74 @@ header {
 
 .decrease {
 	color: var(--orange-color);
+}
+/* Revenue chart styling */
+
+.revenue-chart {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--white-color);
+	padding: 16px 25px 30px 25px;
+}
+
+.revenue-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.revenue-buttons button {
+	border-radius: 100px;
+	border: none;
+	padding: 10px 25px;
+	color: var(--white-color);
+}
+
+.option-btn {
+	background-color: var(--orange-color);
+}
+
+.viewall-btn {
+	background-color: var(--purple-color);
+}
+
+.revenue-content {
+	display: flex;
+	justify-content: space-around;
+}
+
+.revenue-img {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	padding-top: 15px;
+}
+
+.revenue-chart-img {
+	width: 100%;
+}
+
+.revenue-stats-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.revenue-stats {
+	text-align: center;
+}
+
+.revenue-stats h3 {
+	margin-top: 10px;
+}
+
+.revenue-table {
+	color: var(--dark-grey-color);
+	display: flex;
+	align-items: center;
+	line-height: 25pt;
+}
+
+.revenue-table td, td{
+	width: 150px;
 }

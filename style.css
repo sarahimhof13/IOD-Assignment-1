@@ -131,215 +131,419 @@ table {
   --bright-green-color: #54ca68;
   --red-color: #e94a40;
   --dark-grey-color: #6c757d;
+  --light-grey-color: #f6f6f6;
   --blue-color: #3abaf4;
-  --white-color: #FFFFFF;
+  --white-color: #ffffff;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 
 body {
-	font-family: 'Nunito', sans-serif;
-	background-color: #f6f6f6;
+  font-family: "Nunito", sans-serif;
+  background-color: #f6f6f6;
 }
 
 button {
-	font-family: 'Nunito', sans-serif;
-	font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
 }
 
-h1, h2, h3, h4, h5 {
-	font-weight: 700;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
 }
 
 h3 {
-	font-size: 1.25em;
+  font-size: 1.25em;
 }
 
 p {
-	font-weight: 400;
+  font-weight: 400;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
-/* Sidebar Styling */
-.nav {
-	height: 100%;
-	position: fixed;
+.green-btn {
+  background-color: var(--bright-green-color);
 }
+
+.red-btn {
+  background-color: var(--red-color);
+}
+
+.blue-btn {
+  background-color: var(--blue-color);
+}
+
+.purple-btn {
+  background-color: var(--purple-color);
+}
+
+.orange-btn {
+  background-color: var(--orange-color);
+}
+
+.priority {
+  padding: 8px 10px;
+  border-radius: 100px;
+  border: none;
+  color: var(--white-color);
+  font-weight: 500;
+}
+
+.card {
+  background-color: var(--white-color);
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 2px 6px 16px rgba(0, 0, 0, 0.2);
+}
+/* Sidebar Styling */
 
 .sidebar {
-	background-color: var(--white-color);
-	display: flex;
-	flex-direction: column; 
-	float: left;
-	width: 250px;
-	padding: 16px;
-	overflow: auto;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 250px;
+  padding: 16px;
+  overflow: scroll;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .sidebar-logo {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-nav {
+	padding-bottom: 40px;
 }
 
 .sidebar-header {
-	font-size: 12px;
-	text-transform: uppercase;
-	font-weight: 700;
-	color: var(--dark-grey-color);
-	padding: 20px 0 5px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--dark-grey-color);
+  padding: 20px 0 5px 0;
 }
 
 .nav-item {
-	height: 50px;
-	display: flex;
+  height: 50px;
+  display: flex;
 }
 
 .nav-item a {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .nav-item span {
-	color: var(--dark-grey-color);
-	padding-left: 10px;
+  color: var(--dark-grey-color);
+  padding-left: 10px;
 }
 
 /* Header Styling */
 header {
-	background-color: var(--white-color);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 70px;
-	box-shadow: 2px 6px 16px rgba(0, 0, 0, 0.1);
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  box-shadow: 2px 6px 16px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  margin-left: 280px;
+  z-index: 1;
 }
 
 .header-left {
-	display: flex;
+  display: flex;
 }
 
-.header-left img, .header-right img {
-	padding: 0 10px 0 10px;
+.header-left img,
+.header-right img {
+  padding: 0 10px 0 10px;
 }
 
 .header-left input {
-	background-color: rgba(103, 119, 239, 0.1);
-	height: 40px;
-	width: 200px;
-	border-radius: 5px;
-	border: none;
-	padding-left: 10px;
+  background-color: rgba(103, 119, 239, 0.1);
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+  padding-left: 10px;
 }
 
 .header-right {
+  display: flex;
+}
+
+/* main styling */
+main {
+	position: relative;
+	margin-left: 280px;
 	display: flex;
+	flex-direction: column;
+  margin-top: 10px;
 }
 
 /* Stats Section styling */
 .stats-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	padding-top: 50px;
-	margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 30px 30px 15px 30px;
 }
 
 .stats-card {
-	background-color: var(--white-color);
-	border-radius: 10px;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	padding: 15px 20px;
-	margin-bottom: 30px;
-	box-shadow: 2px 6px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
 }
 
 .stats-info h5 {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .stats-info h3 {
-	margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .increase {
-	color: var(--bright-green-color);
+  color: var(--bright-green-color);
 }
 
 .decrease {
-	color: var(--orange-color);
+  color: var(--orange-color);
 }
 /* Revenue chart styling */
 
 .revenue-chart {
-	display: flex;
-	flex-direction: column;
-	background-color: var(--white-color);
-	padding: 16px 25px 30px 25px;
+  padding: 16px 25px 30px 25px;
+  margin: 15px 30px;
 }
 
 .revenue-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .revenue-buttons button {
-	border-radius: 100px;
-	border: none;
-	padding: 10px 25px;
-	color: var(--white-color);
+  border-radius: 100px;
+  border: none;
+  padding: 10px 25px;
+  color: var(--white-color);
 }
 
 .option-btn {
-	background-color: var(--orange-color);
+  background-color: var(--orange-color);
 }
 
 .viewall-btn {
-	background-color: var(--purple-color);
+  background-color: var(--purple-color);
 }
 
 .revenue-content {
-	display: flex;
-	justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .revenue-img {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-top: 15px;
 }
 
 .revenue-chart-img {
-	width: 100%;
+  width: 100%;
 }
 
 .revenue-stats-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .revenue-stats {
-	text-align: center;
+  text-align: center;
 }
 
 .revenue-stats h3 {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 
 .revenue-table {
-	color: var(--dark-grey-color);
-	display: flex;
-	align-items: center;
-	line-height: 25pt;
+  color: var(--dark-grey-color);
+  display: flex;
+  align-items: center;
+  line-height: 25pt;
 }
 
-.revenue-table td, td{
-	width: 150px;
+.revenue-table td {
+  width: 150px;
+}
+
+/* Charts styling */
+
+.charts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 15px 30px;
+}
+
+.chart-card {
+  padding: 15px 20px;
+}
+
+.chart-card h5 {
+  margin-bottom: 15px;
+}
+
+/* Task table styling */
+
+.task-table-section {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  margin: 15px 30px;
+}
+
+.task-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.task-table-header input {
+  height: 30px;
+  border: 1px solid var(--dark-grey-color);
+  border-radius: 100px;
+  padding-left: 10px;
+}
+
+.task-table {
+  text-align: left;
+}
+
+.task-table th {
+  font-weight: 700;
+}
+
+.task-table th,
+td {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.task-table tr:nth-child(2n + 1),
+.task-table th {
+  background-color: var(--light-grey-color);
+}
+
+/* Task table button styling */
+
+.detail-btn {
+  padding: 10px;
+  border: 1px solid var(--purple-color);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--purple-color);
+}
+
+/* Support ticket styling */
+
+.support-payment-container {
+	display: flex;
+	flex-direction: row;
+}
+
+.support-ticket {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 30px;
+  padding: 20px;
+}
+
+.support-ticket-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.support-ticket input {
+	border: 1px solid var(--dark-grey-color);
+	border-radius: 100px;
+	height: 30px;
+	padding-left: 10px;
+}
+
+.support-enquiries {
+  display: flex;
+  flex-direction: column;
+}
+
+.support-card {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.support-user-img {
+  padding-right: 15px;
+}
+
+.support-info {
+  font-size: 12px;
+  line-height: 28px;
+}
+
+.float-right {
+  float: right;
+}
+
+.support-number {
+  color: var(--purple-color);
+}
+
+/* Project payments styling*/
+.project-payments {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 30px;
+  padding: 20px;
+}
+
+.project-payments-header {
+  margin-bottom: 20px;
+}
+
+.project-payments-table th {
+  background-color: var(--light-grey-color);
+  padding: 24px 10px;
+  color: var(--dark-grey-color);
+}
+
+.project-payments-table th, td {
+  font-size: 12px;
+}
+
+.project-payments-table td {
+  border-bottom: 1px solid var(--light-grey-color);
+  padding: 24px 10px;
 }
